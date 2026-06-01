@@ -236,8 +236,11 @@ button:hover{
 @media(max-width:480px){
 
     .pantalla{
-    align-items:flex-start;
-    padding-top:80px;
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:20px;
     }
 
     .card{
