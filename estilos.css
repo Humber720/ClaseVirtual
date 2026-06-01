@@ -117,9 +117,11 @@ label{
 input{
     width:100%;
     padding:15px;
-    border:2px solid #cbd5e1;
-    border-radius:12px;
-    font-size:17px;
+    border:3px solid #dbeafe;
+    border-radius:15px;
+    font-size:18px;
+    transition:.3s;
+    margin-bottom:15px;
 }
 
 input:focus{
