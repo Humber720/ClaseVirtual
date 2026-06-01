@@ -1,0 +1,272 @@
+/* ======================================
+   RESET GENERAL
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --azul:#3b82f6;
+    --celeste:#60a5fa;
+    --verde:#22c55e;
+    --amarillo:#facc15;
+    --naranja:#fb923c;
+    --blanco:#ffffff;
+    --gris:#f5f7fb;
+    --texto:#1f2937;
+}
+
+/* ======================================
+   BODY
+====================================== */
+
+body{
+    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #60a5fa,
+        #93c5fd,
+        #bfdbfe
+    );
+    overflow-x:hidden;
+}
+
+/* ======================================
+   PANTALLAS
+====================================== */
+
+.pantalla{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.oculto{
+    display:none !important;
+}
+
+/* ======================================
+   TARJETA PRINCIPAL
+====================================== */
+
+.card{
+    width:100%;
+    max-width:550px;
+    background:#ffffff;
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    animation:aparecer .6s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ======================================
+   TITULOS
+====================================== */
+
+h1{
+    color:var(--azul);
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+h2{
+    color:var(--naranja);
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.descripcion{
+    color:#555;
+    margin-bottom:25px;
+}
+
+/* ======================================
+   FORMULARIOS
+====================================== */
+
+.formulario{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+label{
+    text-align:left;
+    font-weight:700;
+    color:var(--texto);
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:2px solid #cbd5e1;
+    border-radius:12px;
+    font-size:17px;
+}
+
+input:focus{
+    outline:none;
+    border-color:var(--azul);
+}
+
+/* ======================================
+   BOTONES
+====================================== */
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#btnGenerar{
+    background:var(--verde);
+}
+
+#btnEntrarClase{
+    background:var(--azul);
+}
+
+#btnCopiar{
+    background:var(--naranja);
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+/* ======================================
+   RESULTADO CLASE
+====================================== */
+
+#resultadoClase{
+    margin-top:20px;
+    padding:20px;
+    background:#f8fafc;
+    border-radius:15px;
+    border:2px dashed #93c5fd;
+}
+
+#codigoClase{
+    font-size:22px;
+    font-weight:bold;
+    color:var(--verde);
+    margin:15px 0;
+}
+
+#linkClase{
+    margin-bottom:10px;
+}
+
+/* ======================================
+   INFO CLASE
+====================================== */
+
+.infoClase{
+    background:#eff6ff;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.infoClase strong{
+    color:var(--azul);
+}
+
+/* ======================================
+   VIDEOLLAMADA
+====================================== */
+
+#jaas-container{
+    width:100%;
+    height:100vh;
+    display:none;
+}
+
+/* ======================================
+   RESPONSIVE TABLET
+====================================== */
+
+@media(max-width:768px){
+
+    .card{
+        max-width:95%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+}
+
+/* ======================================
+   RESPONSIVE CELULAR
+====================================== */
+
+@media(max-width:480px){
+
+    .card{
+        padding:20px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    input{
+        font-size:16px;
+        padding:14px;
+    }
+
+    button{
+        padding:14px;
+        font-size:16px;
+    }
+
+    #codigoClase{
+        font-size:18px;
+    }
+}
+
+#qrcode{
+    margin:20px auto;
+    display:flex;
+    justify-content:center;
+}
+
+#btnEntrarProfesor{
+    background:#2563eb;
+    margin-top:15px;
+}
