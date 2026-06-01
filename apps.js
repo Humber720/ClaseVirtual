@@ -234,11 +234,17 @@ function iniciarClase(
 
             configOverwrite: {
 
+                defaultLanguage: "es",
+
                 prejoinPageEnabled: false,
 
                 startWithAudioMuted: true,
 
-                startWithVideoMuted: true
+                startWithVideoMuted: true,
+
+                resolution: 360,
+
+                disableDeepLinking: true
             },
 
             interfaceConfigOverwrite: {
@@ -247,7 +253,6 @@ function iniciarClase(
             }
         }
     );
-
 }
 
 
