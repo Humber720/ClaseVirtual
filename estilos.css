@@ -149,10 +149,6 @@ button{
     background:var(--verde);
 }
 
-#btnEntrarClase{
-    background:var(--azul);
-}
-
 #btnCopiar{
     background:var(--naranja);
 }
@@ -235,16 +231,8 @@ button:hover{
 
 @media(max-width:480px){
 
-    .pantalla{
-        min-height:100vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        padding:20px;
-    }
-
     .card{
-        padding:20px;
+        margin-top:-30px;
     }
 
     h1{
