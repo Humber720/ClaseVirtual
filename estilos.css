@@ -235,6 +235,11 @@ button:hover{
 
 @media(max-width:480px){
 
+    .pantalla{
+    align-items:flex-start;
+    padding-top:80px;
+    }
+
     .card{
         padding:20px;
     }
@@ -271,4 +276,17 @@ button:hover{
 #btnEntrarProfesor{
     background:#2563eb;
     margin-top:15px;
+}
+
+/* ======================================
+   PANTALLA ESTUDIANTE
+====================================== */
+
+#nombreEstudiante{
+    margin-bottom:25px;
+}
+
+#btnEntrarClase{
+    background:var(--azul);
+    margin-top:10px;
 }
