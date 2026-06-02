@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,125 +10,81 @@
 
 <script src="https://8x8.vc/vpaas-magic-cookie-3734582b14db4076a2f4ae0215aeb8db/external_api.js"></script>
 
-
 </head>
 
 <body>
 
-
-<!-- ========================= -->
-<!-- PANTALLA PROFESOR -->
-<!-- ========================= -->
-
+<!-- ================= PROFESOR ================= -->
 <section id="pantallaProfesor" class="pantalla">
 
-    <div class="card">
+  <div class="card">
 
-        <h1>AULA VIRTUAL</h1>
+    <h1>AULA VIRTUAL</h1>
+    <h2>U.E. JUPAPINA</h2>
 
-        <h2>U.E. JUPAPINA</h2>
+    <p class="descripcion">Crear una nueva clase virtual</p>
 
-        <p class="descripcion">
-            Crear una nueva clase virtual
-        </p>
+    <div class="formulario">
 
-        <div class="formulario">
+      <label>Materia</label>
+      <input type="text" id="materia" placeholder="Ej: Matemática">
 
-            <label>Materia</label>
+      <label>Curso</label>
+      <input type="text" id="curso" placeholder="Ej: 5A">
 
-            <input
-                type="text"
-                id="materia"
-                placeholder="Ej: Matemática">
-
-            <label>Curso</label>
-
-            <input
-                type="text"
-                id="curso"
-                placeholder="Ej: 5A">
-
-            <button id="btnGenerar">
-                Generar Clase
-            </button>
-
-        </div>
-
-        <div id="resultadoClase" class="oculto">
-
-            <h3>Clase Creada</h3>
-
-            <p id="codigoClase"></p>
-
-            <input
-                type="text"
-                id="linkClase"
-                readonly>
-
-            <button id="btnCopiar">
-                Copiar Enlace
-            </button>
-
-            <div id="qrcode"></div>
-
-            <button id="btnEntrarProfesor">
-                Entrar a la Clase
-            </button>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- PANTALLA ESTUDIANTE -->
-<!-- ========================= -->
-
-<section id="pantallaEstudiante" class="pantalla oculto">
-
-    <div class="card">
-
-        <h1>AULA VIRTUAL</h1>
-
-        <h2>U.E. JUPAPINA</h2>
-
-        <p class="descripcion">
-            Bienvenido a tu clase virtual
-        </p>
-
-        <div class="infoClase">
-
-            <span>Clase:</span>
-
-            <strong id="nombreClase">
-                Cargando...
-            </strong>
-
-        </div>
-
-        <input
-            type="text"
-            id="nombreEstudiante"
-            placeholder="Escribe tu nombre">
-
-        <button id="btnEntrarClase">
-            Entrar
-        </button>
+      <button id="btnGenerar">Generar Clase</button>
 
     </div>
 
+    <!-- RESULTADO -->
+    <div id="resultadoClase" class="oculto">
+
+      <h3>Clase Creada</h3>
+
+      <p id="codigoClase"></p>
+
+      <input type="text" id="linkClase" readonly>
+
+      <button id="btnCopiar">Copiar Enlace</button>
+
+      <div id="qrcode"></div>
+
+      <button id="btnEntrarProfesor">Entrar a la Clase</button>
+
+    </div>
+
+  </div>
+
 </section>
 
-<!-- ========================= -->
-<!-- VIDEOLLAMADA -->
-<!-- ========================= -->
+<!-- ================= ESTUDIANTE ================= -->
+<section id="pantallaEstudiante" class="pantalla oculto">
 
+  <div class="card">
+
+    <h1>AULA VIRTUAL</h1>
+    <h2>U.E. JUPAPINA</h2>
+
+    <p class="descripcion">Bienvenido a tu clase virtual</p>
+
+    <div class="infoClase">
+      <span>Clase:</span>
+      <strong id="nombreClase">Cargando...</strong>
+    </div>
+
+    <input type="text" id="nombreEstudiante" placeholder="Escribe tu nombre">
+
+    <button id="btnEntrarClase">Entrar</button>
+
+  </div>
+
+</section>
+
+<!-- VIDEOLLAMADA -->
 <div id="jaas-container"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
 <script src="apps.js"></script>
-```
 
 </body>
-
 </html>
