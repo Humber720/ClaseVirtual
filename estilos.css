@@ -318,3 +318,36 @@ button.loading::after{
         transform:translateY(0) scale(1);
     }
 }
+
+/*PARA ADVERTENCIA*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-contenido {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#btnCerrarModal {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: #ff2802;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
