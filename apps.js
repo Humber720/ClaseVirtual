@@ -131,10 +131,10 @@ if (btnEntrar) {
     /*}*/
 function iniciarClase(sala, nombre) {
 
-    const url =
-        `https://meet.jit.si/${encodeURIComponent(sala)}` +
-        `#userInfo.displayName="${encodeURIComponent(nombre)}"` +
-        `&config.disableDeepLinking=true`;
+   const url =
+       `https://meet.jit.si/${encodeURIComponent(sala)}` +
+       `#userInfo.displayName="${encodeURIComponent(nombre)}"&lang=es` +
+       `&config.disableDeepLinking=true`;
 
     window.open(url, "_blank");
 
