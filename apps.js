@@ -168,7 +168,7 @@ if (btnEntrarProfesor) {
 console.log("Aula Virtual cargada correctamente 🚀");
 
 /* ======================================
-  PARA ADVERTENCIA
+   PARA ADVERTENCIA
 ====================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -177,18 +177,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnCerrar = document.getElementById("btnCerrarModal");
   const btnGenerar = document.getElementById("btnGenerar");
 
-  // 👉 abrir modal SOLO al crear clase
-  btnGenerar.addEventListener("click", function (e) {
-    e.preventDefault(); // evita cualquier acción rara
+  if (!modal || !btnCerrar || !btnGenerar) return;
+
+  // 👉 ABRIR MODAL (NO rompe generación)
+  btnGenerar.addEventListener("click", function () {
     modal.style.display = "block";
   });
 
-  // 👉 cerrar modal
+  // 👉 CERRAR MODAL
   btnCerrar.addEventListener("click", function () {
     modal.style.display = "none";
   });
 
-  // 👉 cerrar si hacen clic fuera del cuadro
+  // 👉 CERRAR SI HACEN CLICK FUERA
   window.addEventListener("click", function (e) {
     if (e.target === modal) {
       modal.style.display = "none";
