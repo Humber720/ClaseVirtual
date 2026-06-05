@@ -2,15 +2,15 @@
    CONFIGURACIÓN JITSI (8x8 / JAAS)
 ====================================== */
 
-/*const APP_ID = "vpaas-magic-cookie-3734582b14db4076a2f4ae0215aeb8db";
+/*const APP_ID = "vpaas-magic-cookie-3734582b14db4076a2f4ae0215aeb8db";*/
 /*const DOMINIO = "8x8.vc"; CODIGO DE PAGO*/
-const DOMINIO = "meet.jit.si";
+/*const DOMINIO = "meet.jit.si";*/
 
 /* ======================================
    ESTADO GLOBAL
 ====================================== */
 
-let apiJitsi = null;
+/*let apiJitsi = null;*/
 
 /* ======================================
    ELEMENTOS
@@ -24,7 +24,7 @@ const codigoClase = document.getElementById("codigoClase");
 const linkClase = document.getElementById("linkClase");
 const nombreClase = document.getElementById("nombreClase");
 
-const jaasContainer = document.getElementById("jaas-container");
+/*const jaasContainer = document.getElementById("jaas-container");*/
 
 /* ======================================
    DETECTAR SALA EN URL
@@ -135,15 +135,22 @@ if (btnEntrar) {
    INICIAR VIDEOLLAMADA (JITSI / 8x8)
 ====================================== */
 
-function iniciarClase(sala, nombre) {
+/*function iniciarClase(sala, nombre) {
 
     /* cerrar sesión anterior si existe */
-    if (apiJitsi) {
-        apiJitsi.dispose();
-        apiJitsi = null;
-    }
+    /*if (apiJitsi) {*/
+        /*apiJitsi.dispose();*/
+        /*apiJitsi = null;*/
+    /*}*/
+function iniciarClase(sala, nombre) {
 
-    pantallaEstudiante.style.display = "none";
+    window.open(
+        `https://meet.jit.si/${encodeURIComponent(sala)}`,
+        "_blank"
+    );
+}
+
+   /* pantallaEstudiante.style.display = "none";
     pantallaProfesor.style.display = "none";
     jaasContainer.style.display = "block";
 
@@ -152,7 +159,7 @@ function iniciarClase(sala, nombre) {
     apiJitsi = new JitsiMeetExternalAPI(DOMINIO, {
         roomName,*/
     
-    const roomName = sala;
+    /*const roomName = sala;
 
     apiJitsi = new JitsiMeetExternalAPI(DOMINIO, {
 
@@ -177,7 +184,7 @@ function iniciarClase(sala, nombre) {
             SHOW_JITSI_WATERMARK: false
         }
     });
-}
+}*/
 
 /* ======================================
    ENTRAR PROFESOR A CLASE
