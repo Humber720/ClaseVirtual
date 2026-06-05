@@ -1,16 +1,3 @@
-/* ======================================
-   CONFIGURACIÓN JITSI (8x8 / JAAS)
-====================================== */
-
-/*const APP_ID = "vpaas-magic-cookie-3734582b14db4076a2f4ae0215aeb8db";*/
-/*const DOMINIO = "8x8.vc"; CODIGO DE PAGO*/
-/*const DOMINIO = "meet.jit.si";*/
-
-/* ======================================
-   ESTADO GLOBAL
-====================================== */
-
-/*let apiJitsi = null;*/
 
 /* ======================================
    ELEMENTOS
@@ -157,21 +144,22 @@ function iniciarClase(sala, nombre) {
    ENTRAR PROFESOR A CLASE
 ====================================== */
 
-btnEntrarProfesor.addEventListener("click", () => {
+const btnEntrarProfesor = document.getElementById("btnEntrarProfesor");
 
-    alert(
-        'Si aparece "Soy el anfitrión", inicie sesión con su cuenta Google para administrar la clase.'
-    );
+if (btnEntrarProfesor) {
 
-    const enlace = document.getElementById("linkClase").value;
+    btnEntrarProfesor.addEventListener("click", () => {
 
-    if (!enlace) {
-        alert("Primero genere una clase.");
-        return;
-    }
+        const enlace = document.getElementById("linkClase").value;
 
-    window.open(enlace, "_blank");
-});
+        if (!enlace) {
+            alert("Primero genere una clase.");
+            return;
+        }
+
+        window.open(enlace, "_blank");
+    });
+}
 
 /* ======================================
    LOG
