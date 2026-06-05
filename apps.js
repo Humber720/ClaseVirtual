@@ -2,8 +2,9 @@
    CONFIGURACIÓN JITSI (8x8 / JAAS)
 ====================================== */
 
-const APP_ID = "vpaas-magic-cookie-3734582b14db4076a2f4ae0215aeb8db";
-const DOMINIO = "8x8.vc";
+/*const APP_ID = "vpaas-magic-cookie-3734582b14db4076a2f4ae0215aeb8db";
+/*const DOMINIO = "8x8.vc"; CODIGO DE PAGO*/
+const DOMINIO = "meet.jit.si";
 
 /* ======================================
    ESTADO GLOBAL
@@ -146,10 +147,16 @@ function iniciarClase(sala, nombre) {
     pantallaProfesor.style.display = "none";
     jaasContainer.style.display = "block";
 
-    const roomName = `${APP_ID}/${encodeURIComponent(sala)}`;
+    /*const roomName = `${APP_ID}/${encodeURIComponent(sala)}`;
 
     apiJitsi = new JitsiMeetExternalAPI(DOMINIO, {
-        roomName,
+        roomName,*/
+    
+    const roomName = sala;
+
+    apiJitsi = new JitsiMeetExternalAPI(DOMINIO, {
+
+    roomName,
 
         parentNode: jaasContainer,
 
