@@ -319,7 +319,11 @@ button.loading::after{
     }
 }
 
-/*PARA ADVERTENCIA*/
+
+/* ======================================
+   MODAL ADVERTENCIA (VERSIÓN PRO)
+====================================== */
+
 .modal {
   display: none;
   position: fixed;
@@ -329,25 +333,80 @@ button.loading::after{
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.6);
+
+  animation: fadeIn .2s ease;
 }
 
+/* CONTENIDO CENTRADO REAL */
 .modal-contenido {
-  background: #fff;
+  background: #ffffff;
   width: 90%;
-  max-width: 400px;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 10px;
+  max-width: 420px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+
+  padding: 25px;
+  border-radius: 16px;
+
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+
+  animation: popIn .25s ease forwards;
 }
 
+/* TEXTO DEL AVISO */
+.modal-contenido p {
+  color: #d35400;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* BOTÓN */
 #btnCerrarModal {
-  margin-top: 15px;
-  padding: 8px 15px;
-  background: #ff2802;
+  margin-top: 10px;
+  padding: 10px 18px;
+
+  background: #e74c3c;
   color: white;
+
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+
   cursor: pointer;
+  font-weight: bold;
+
+  transition: all .2s ease;
+}
+
+/* HOVER */
+#btnCerrarModal:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* CLICK */
+#btnCerrarModal:active {
+  transform: scale(0.95);
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
