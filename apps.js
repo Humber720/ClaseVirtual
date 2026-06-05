@@ -153,62 +153,25 @@ function iniciarClase(sala, nombre) {
 
 }
 
-   /* pantallaEstudiante.style.display = "none";
-    pantallaProfesor.style.display = "none";
-    jaasContainer.style.display = "block";
-
-    /*const roomName = `${APP_ID}/${encodeURIComponent(sala)}`;
-
-    apiJitsi = new JitsiMeetExternalAPI(DOMINIO, {
-        roomName,*/
-    
-    /*const roomName = sala;
-
-    apiJitsi = new JitsiMeetExternalAPI(DOMINIO, {
-
-    roomName,
-
-        parentNode: jaasContainer,
-
-        userInfo: {
-            displayName: nombre
-        },
-
-        configOverwrite: {
-            defaultLanguage: "es",
-            prejoinPageEnabled: false,
-            startWithAudioMuted: true,
-            startWithVideoMuted: true,
-            resolution: 360,
-            disableDeepLinking: true
-        },
-
-        interfaceConfigOverwrite: {
-            SHOW_JITSI_WATERMARK: false
-        }
-    });
-}*/
-
 /* ======================================
    ENTRAR PROFESOR A CLASE
 ====================================== */
 
-const btnEntrarProfesor = document.getElementById("btnEntrarProfesor");
+btnEntrarProfesor.addEventListener("click", () => {
 
-if (btnEntrarProfesor) {
+    alert(
+        'Si aparece "Soy el anfitrión", inicie sesión con su cuenta Google para administrar la clase.'
+    );
 
-    btnEntrarProfesor.addEventListener("click", () => {
+    const enlace = document.getElementById("linkClase").value;
 
-        const enlace = document.getElementById("linkClase").value;
+    if (!enlace) {
+        alert("Primero genere una clase.");
+        return;
+    }
 
-        if (!enlace) {
-            alert("Primero genere una clase.");
-            return;
-        }
-
-        window.open(enlace, "_blank");
-    });
-}
+    window.open(enlace, "_blank");
+});
 
 /* ======================================
    LOG
