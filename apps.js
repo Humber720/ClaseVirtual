@@ -146,9 +146,11 @@ function iniciarClase(sala, nombre) {
 
     const url =
         `https://meet.jit.si/${encodeURIComponent(sala)}` +
-        `#userInfo.displayName="${encodeURIComponent(nombre)}"`;
+        `#userInfo.displayName="${encodeURIComponent(nombre)}"` +
+        `&config.disableDeepLinking=true`;
 
     window.open(url, "_blank");
+
 }
 
    /* pantallaEstudiante.style.display = "none";
