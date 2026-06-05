@@ -144,10 +144,11 @@ if (btnEntrar) {
     /*}*/
 function iniciarClase(sala, nombre) {
 
-    window.open(
-        `https://meet.jit.si/${encodeURIComponent(sala)}`,
-        "_blank"
-    );
+    const url =
+        `https://meet.jit.si/${encodeURIComponent(sala)}` +
+        `#userInfo.displayName="${encodeURIComponent(nombre)}"`;
+
+    window.open(url, "_blank");
 }
 
    /* pantallaEstudiante.style.display = "none";
