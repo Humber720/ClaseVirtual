@@ -32,7 +32,8 @@
       <label>Curso</label>
       <input type="text" id="curso" placeholder="Ej: 5A">
 
-      <button id="btnGenerar">Generar Clase</button>
+      <!--<button id="btnGenerar">Generar Clase</button>-->
+      <button id="btnGenerar" type="button">Generar Clase</button>
 
     </div>
 
@@ -85,6 +86,26 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="apps.js"></script>
+
+<!-- MODAL DE ADVERTENCIA -->
+<div id="modalAdvertencia" class="modal">
+
+  <div class="modal-contenido">
+
+    <p style="
+      color:#d35400;
+      font-weight:bold;
+      margin-top:10px;
+    ">
+      ⚠️ El profesor debe iniciar la clase antes de compartir el enlace o QR a los estudiantes.<br>
+      Si aparece "Soy el anfitrión", inicie sesión con su cuenta Google.
+    </p>
+
+    <button id="btnCerrarModal" type="button">Cerrar</button>
+
+  </div>
+
+</div>
 
 </body>
 </html>
